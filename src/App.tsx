@@ -12,6 +12,7 @@ import { auth } from './firebase';
 const App: React.FC = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   console.log(`rendering App with loggedIn=${loggedIn}`);
+  
   auth.onAuthStateChanged(user => {
     if(user){
         console.log("user has logged in", user);
